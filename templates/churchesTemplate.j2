@@ -1,0 +1,519 @@
+{%- macro infobox(name,imageSrc,location,district,country,province,tradition,denomination,membership,weeklyattendance,website,founded,founders,dedication,consecrated,events,architects,architecturaltype,style,yearsbuilt,groundbreaking,completed,constructioncost,capacity,length,width,height,chancellor,priest,minister,pastor,LatitudeLongitude	) -%}
+
+{%- if  name == 'nan' -%}
+	{%- set name='' -%}
+{%- endif -%}
+
+{%- if imageSrc== 'nan' -%}
+    {%- set imageSrc='' -%}
+{%- endif -%}
+
+{%- if location == 'nan' -%}
+    {%- set location='' -%}
+{%- endif -%}
+
+{%- if district == 'nan' -%}
+	{%- set district ='' -%}
+{%- endif -%}
+
+{%- if country == 'nan' -%}
+	{%- set country ='' -%}
+{%- endif -%}
+
+{%- if province == 'nan' -%}
+	{%- set province ='' -%}
+{%- endif -%}
+
+{%- if tradition == 'nan' -%}
+	{%- set tradition ='' -%}
+{%- endif -%}
+
+{%- if denomination == 'nan' -%}
+	{%- set denomination ='' -%}
+{%- endif -%}
+
+{%- if membership == 'nan' -%}
+	{%- set membership ='' -%}
+{%- endif -%}
+
+{%- if weeklyattendance == 'nan' -%}
+	{%- set weeklyattendance ='' -%}
+{%- endif -%}
+
+{%- if website == 'nan' -%}
+	{%- set website ='' -%}
+{%- endif -%}
+
+{%- if founded == 'nan' -%}
+	{%- set founded ='' -%}
+{%- endif -%}
+
+{%- if founders == 'nan' -%}
+	{%- set founders ='' -%}
+{%- endif -%}
+
+{%- if dedication == 'nan' -%}
+	{%- set dedication ='' -%}
+{%- endif -%}
+
+{%- if consecrated == 'nan' -%}
+	{%- set consecrated ='' -%}
+{%- endif -%}
+
+{%- if events == 'nan' -%}
+	{%- set events ='' -%}
+{%- endif -%}
+
+{%- if architects == 'nan' -%}
+	{%- set architects ='' -%}
+{%- endif -%}
+
+{%- if architecturaltype == 'nan' -%}
+	{%- set architecturaltype ='' -%}
+{%- endif -%}
+
+{%- if style == 'nan' -%}
+	{%- set style ='' -%}
+{%- endif -%}
+
+{%- if yearsbuilt == 'nan' -%}
+	{%- set yearsbuilt ='' -%}
+{%- endif -%}
+
+{%- if groundbreaking == 'nan' -%}
+	{%- set groundbreaking ='' -%}
+{%- endif -%}
+
+{%- if completed == 'nan' -%}
+	{%- set completed ='' -%}
+{%- endif -%}
+
+{%- if constructioncost == 'nan' -%}
+	{%- set constructioncost ='' -%}
+{%- endif -%}
+
+{%- if capacity == 'nan' -%}
+	{%- set capacity ='' -%}
+{%- endif -%}
+
+{%- if length == 'nan' -%}
+	{%- set length ='' -%}
+{%- endif -%}
+
+{%- if width == 'nan' -%}
+	{%- set width ='' -%}
+{%- endif -%}
+
+{%- if height == 'nan' -%}
+	{%- set height ='' -%}
+{%- endif -%}
+
+{%- if chancellor == 'nan' -%}
+	{%- set chancellor ='' -%}
+{%- endif -%}
+
+{%- if priest == 'nan' -%}
+	{%- set priest ='' -%}
+{%- endif -%}
+
+{%- if minister == 'nan' -%}
+	{%- set minister ='' -%}
+{%- endif -%}
+
+{%- if pastor == 'nan' -%}
+	{%- set pastor ='' -%}
+{%- endif -%}
+
+{%- if LatitudeLongitude == 'nan' -%}
+	{%- set LatitudeLongitude ='' -%}
+{%- endif -%}
+
+
+{{'{{Infobox '}}
+| bodystyle = width:25em;text-align:center;
+| abovestyle = background-color:#cfc;
+| headerstyle = background-color:#ccf;text-align:center;
+| labelstyle = background-color:#ddf; width:20%;text-align:left;
+| title		= {{name}}
+| image =	{{imageSrc}} 
+| label1 = స్థానం
+| data1 = {{location}}
+| label2 = జిల్లా
+| data2 = {{district}}
+| label3 = దేశం
+| data3 = {{country}}
+| label4 = ప్రావిన్స్
+| data4 = {{province}}
+| label5 = సంప్రదాయం
+| data5 = {{tradition}}
+| label6 = 
+| data6 = {{denomination}}
+| label7 = సభ్యత్వం
+| data7 = {{membership}}
+| label8 = వారంవారీ హాజరు
+| data8 = {{weeklyattendance}}
+| label9 = వెబ్సైట్
+| data9 = {{website}}
+| label10 = స్థాపించారు
+| data10 = {{founded}}
+| label11 = వ్యవస్థాపకులు
+| data11 = {{founders}}
+| label12 = అంకితం
+| data12 = {{dedication}}
+| label13 = పవిత్రమైన
+| data13 = {{consecrated}}
+| label14 = సంఘటనలు
+| data14 = {{events}}
+| label15 = వాస్తుశిల్పులు
+| data15 = {{architects}}
+| label16 = నిర్మాణ రకం
+| data16 = {{architecturaltype}}
+| label17 = శైలి
+| data17= {{style}}
+| label18 = సంవత్సరాలు నిర్మించబడింది
+| data18 = {{yearsbuilt}}
+| label19 = భూస్థాపితం
+| data19 = {{groundbreaking}}
+| label20 = పూర్తయింది
+| data20 = {{completed}}
+| label21 = నిర్మాణ వ్యయం
+| data21 = {{constructioncost}}
+| label22 = సామర్థ్యం
+| data22 = {{capacity}}
+| label23 = పొడవు
+| data23 = {{length}}
+| label24 = వెడల్పు
+| data24 = {{width}}
+| label25 = ఎత్తు
+| data25 = {{height}}
+| label26 = ఛాన్సలర్
+| data26 = {{chancellor}}
+| label27 = పూజారి
+| data27 = {{priest}}
+| label28 = మంత్రి
+| data28 = {{minister}}
+| label29 = పాస్టర్
+| data29 = {{pastor}}
+| label30 = అక్షాంశరేఖాంశం
+| data30 = {{LatitudeLongitude}}
+    {{'}}\n'}}
+{%- endmacro -%}
+
+
+
+{%- macro intro(name,location,district,province,country,denomination) -%}
+	
+{{name}}
+{# ##}
+	
+{%- if location != 'nan' -%}
+{{name}} అనే చర్చి  {{location}} వద్ద ఉన్న చర్చి..
+{%- else -%}
+{{name}} అనే చర్చి  చాల ప్రసిద్ధమైన పవిత్రస్థలం . 
+{%- endif -%}
+	
+	
+{%- set lineDP = [
+					       'ఇది '+district+' జిల్లాలో మరియు '+province+' ఉపసమితి ప్రాంతం లో ఉంది.',
+					        'ఇది '+province+' ఉపసమితి ప్రాంతం లో మరియు '+district+' జిల్లాలో ఉంది.'
+					   ] | random
+-%}
+	
+{%- if district != 'nan' and province != 'nan'-%}
+{{lineDP}}
+{%- elif district != 'nan' -%}
+ఈ  చర్చి {{district}} జిల్లాలో  ఉంది.
+{%- elif province != 'nan' -%}
+ఈ  చర్చి  {{province}} ఉపసమితి ప్రాంతం లో  ఉంది.
+{%- endif -%}
+	
+{%- if country != 'nan' -%}
+ఇది  {{country}} దేశం లో భాగం.
+{%- endif -%}
+	
+{%- set lineD = [
+					       'చర్చి యొక్క తెగ '+denomination+'.',
+					      'ఈ చర్చి  '+denomination+' తెగకు చెందినది.'
+					   ] | random
+-%}
+
+{%- if denomination != 'nan' -%}
+{{lineD}}
+{%- endif -%}
+
+{%- endmacro -%}
+
+
+{%-	macro history(name,founded,founders,dedication,consecrated,events,tradition) -%}
+
+{# ##}
+{{"==చరిత్ర==\n"}}
+{# ##}
+	
+{%- set lineF = [
+					  name+' చర్చి  '+ founded+' సంవత్సరంలో స్థాపించబడింది. ',
+					  founded+' వ సంవత్సరంలో '+name+' చర్చి స్థాపించబడింది.'
+					   ] | random
+-%}
+
+{%- if founded != 'nan' -%}
+{{lineF}}
+{%- endif -%}
+	
+{%- set lineFounders = [
+							 'దీని వ్యవస్థాపకులు '+founders+'.',
+							founders+' ఈ  చర్చి యొక్క వ్యవస్థాపకులు.'
+					   ] | random
+-%}
+
+{%- if founders != 'nan' -%}
+{{lineFounders}}
+{%- endif -%}
+	
+{%- set lineDC = [
+					        'ఈ చర్చి  '+dedication+' కి అంకితం చేయబడింది మరియు ఇది '+consecrated+' సంవత్సరంలో పవిత్రం చేయబడింది.',
+					       'ఈ చర్చి  '+consecrated+' సంవత్సరంలో పవిత్రం చేయబడింది  మరియు ఈ చర్చి '+dedication+' కి అంకితం చేయబడింది.' 
+					   ] | random
+-%}
+{%- if dedication != 'nan' and consecrated != 'nan'-%}
+{{lineDC}}
+{%- elif dedication != 'nan' -%}
+ఈ చర్చి  {{dedication}} కి అంకితం చేయబడింది.
+{%- elif consecrated != 'nan' -%}
+ఇది {{consecrated}} సంవత్సరంలో పవిత్రం చేయబడింది.
+{%- endif -%}
+		
+{%- if events != 'nan' -%}
+ఈ చర్చి యొక్క గొప్ప చరిత్రలో జరిగిన కొన్ని చారిత్రాత్మక సంఘటనలు {{events}}.
+{%- endif -%}
+	
+	
+{%- set lineT = [
+					   'చర్చి అనేక పురాతన సంప్రదాయాలను అనుసరిస్తుంది, వాటిలో కొన్ని '+tradition+'.',
+					  'ఈ చర్చి '+tradition+' సంప్రదాయాన్ని అనుసరిస్తుంది.'
+					  ] | random
+-%}
+{%- if tradition != 'nan' -%}
+{{lineT}}
+{%- endif -%}
+	
+{%- endmacro -%}
+	
+{%- macro construction(architects,style,yearsbuilt,groundbreaking,completed,constructioncost,capacity,height,length,width) -%}	
+	
+{# ##}
+{{"==నిర్మాణం==\n"}}
+{# ##}
+	
+{%- set lineA = [
+					   'ఈ చర్చి వాస్తుశిల్పులు '+architects+' నేతృత్వంలో నిర్మించబడింది.',
+					 architects+' వాస్తుశిల్పుల నేతృత్వంలో ఈ చర్చి  నిర్మించబడింది.',
+					   'ఈ  చర్చికి '+architects+' వాస్తుశిల్పి.',
+					  'ఇది వాస్తుశిల్పి '+architects+' సమన్వయంతో నిర్మించబడింది.'
+					  ] | random
+-%}
+{%- if architects != 'nan' -%}
+{{lineA}}
+{%- endif -%}
+	
+{%- set lineS = [
+					   'ఈ చర్చి నిర్మాణ శైలి '+style+'.',
+					 style+' శైలిలో ఈ చర్చి నిర్మాణం  జరిగింది. '
+					 ] | random
+-%}
+{%- if style != 'nan' -%}
+{{lineS}}
+{%- endif -%}
+	
+{%- set lineYB = [
+					      'ఈ చర్చి  ' +yearsbuilt+' సంవత్సరాల పాటు నిర్మించబడింది.',
+					     'ఈ చర్చి నిర్మించడానికి  ' +yearsbuilt+' సంవత్సరాలు  పట్టింది.' 
+					 ] | random
+-%}
+{%- if yearsbuilt != 'nan' -%}
+{{lineYB}}
+{%- endif -%}
+	
+	
+	
+{%- set lineGB = [
+					      'ఈ  చర్చి నిర్మాణం '+groundbreaking+' వ  సంవత్సరంలో  ప్రారంబించారు.',
+					     'ఈ  చర్చిని  కట్టాలి  అనే సంకల్పం '+groundbreaking+' సంవత్సరంలో తీసుకున్నారు .',
+					  groundbreaking+' ఈ  పవిత్రస్థలాని సంకల్ప సంవత్సరం.'
+					 ] | random
+-%}
+
+{%- if groundbreaking != 'nan' -%}
+{{lineGB}}
+{%- endif -%}
+	
+{%- set lineC = [
+					    'ఇది చివరకు '+completed+' సంవత్సరంలో పూర్తయింది.',
+					    'ఈ  చర్చి  '+completed+' నాటికీ  నిర్మించడం పూర్తయింది.'
+					 ] | random
+-%}
+{%-if completed != 'nan' -%}
+{{lineC}}
+{%- endif -%}
+	
+	
+{%- set lineCC = [
+					      'ఈ చర్చి నిర్మాణ వ్యయం '+constructioncost+'.' ,
+					     'ఈ  చర్చి పూర్తి చేయడానికి సుమారుగా '+constructioncost+' నగదు ఖర్చయింది.'
+					 ] | random
+-%}
+
+{%- if constructioncost != 'nan' -%}
+{{lineCC}}
+{%- endif -%}
+	
+{%- set cap = [
+                       'ఇది కనీసం ' + capacity + ' సభ్యులు ఉండేలా నిర్మించబడింది.',
+                       'ఈ  చర్చి  ' + capacity + ' సామర్ధ్యాన్ని  కలిగి ఉంది.'
+
+                    
+                    ] | random
+-%}
+{%- if capacity != 'nan' -%}
+{{cap}}
+{%- endif -%}
+	
+{%- set hei = [
+					'ఈ  చర్చి ఎత్తు' + height + ' కలిగి ఉంది.',
+                       height + ' ఎత్తుని ఈ  చర్చి కలిగి ఉంది.'
+                    ] | random
+-%}
+
+{%- if height != 'nan' -%}
+{{hei}}
+{%- endif -%}
+	
+{%- set len = [
+                       'ఈ  చర్చి పొడవు ' + length + ' కలిగి ఉంది.',
+                       length + ' పొడవుని  ఈ  చర్చి కలిగి ఉంది.'
+                    
+                    ] | random
+-%}
+	
+{%- if length != 'nan' -%}
+{{len}}
+{%- endif -%}
+
+	
+{%- set wid = [
+                       'ఈ చర్చి వెడల్పు' + width + 'కలిగి ఉంది.',
+                       width + ' వెడల్పుని  ఈ చర్చి కలిగి ఉంది.'
+                    
+                    ] | random
+-%}
+{%- if width != 'nan' -%}
+{{wid}}
+{%- endif -%}
+	
+{%- endmacro -%}
+
+
+{%- macro present(chancellor, priest,minister,membership ,pastor, weeklyattendance, website) -%}
+
+{# ##}
+{{"==ప్రస్తుత దృశ్యం==\n"}}
+{# ##}
+	
+{%- set chan = [
+                        'ఈ చర్చి యొక్క గౌరవాధ్యక్షుడు ' + chancellor + ' .',
+                        'ఈ చర్చికి ' + chancellor + ' ఛాన్సలర్.'
+                    
+                    ] | random
+-%}
+
+{%- if chancellor != 'nan' -%}
+{{chan}}
+{%- endif -%}
+		
+{%- set pre = [
+                        'ఈ చర్చి యొక్క ప్రధాన ప్రీస్ట్' + priest + '.',
+                        priest + 'ఈ చర్చి యొక్క ప్రధాన ప్రీస్ట్.'
+                    
+                    ] | random
+-%}
+
+{%- if priest != 'nan' -%}
+{{pre}}
+{%- endif -%}
+    
+{%- if minister != 'nan' -%}
+ఈ చర్చి మంత్రి {{minister}}.
+{%- endif -%}
+
+{%- if pastor != 'nan' -%}
+ఈ చర్చి పాస్టర్ {{pastor}}.
+{%- endif -%}
+	
+{%- if membership != 'nan' -%}
+చర్చి సభ్యత్వం ప్రస్తుతం {{membership}}గా పరిగణించబడుతుంది. 
+{%- endif -%}
+	
+{%- if weeklyattendance != 'nan' -%}
+చర్చి సమావేశాలలో కనిపించే వారంవారీ హాజరు {{weeklyattendance}}. 
+{%- endif -%}
+	
+{%- set web = [
+                       'చర్చి గురించిన సమాచారాన్ని అందించే వెబ్‌సైట్ పేరు' + website + '.',
+                       'ఈ చర్చి గురించి మరింత సమాచారాన్ని ఈ ' + website +'  వెబ్‌సైట్ లో తెల్సుకోవచ్చు.'                   
+                    ] | random
+-%}
+
+{%- if website != 'nan' -%}
+{{web}}
+{%- endif -%}
+	
+{%- endmacro -%}
+
+
+{%- macro bottomSection(references,externalLinks,category) -%}
+	
+{%- if references != 'nan' -%}
+{# ##}
+{{"==ప్రస్తావనలు==\n"}}
+{# ##}
+	
+{%- set listRefs = references.split(' ') -%}
+{%- for item in listRefs -%}
+*{{item}}
+{# ##}
+{%- endfor -%} 
+{%- endif -%}
+	
+{%- if externalLinks != 'nan' -%}
+{# ##}
+{{"==బాహ్య లింకులు==\n"}}
+{# ##}
+	
+{%- set listEL = externalLinks.split(' ') -%}
+{%- for item in listEL -%}
+*{{item}}
+{# ##}
+{%- endfor -%}
+{%- endif -%}		
+	
+{%- if category != 'nan' -%}
+{# ##}
+{{"==వర్గం==\n"}}
+{# ##}
+{{category}}
+{%- endif -%}
+	
+{%- endmacro -%}
+
+	
+{{- infobox(items['name'],items['imageSrc'],items['location'],items['district'],items['country'],items['province'],items['tradition'],items['denomination'],items['membership'],items['weeklyattendance'],items['website'],items['founded'],items['founders'],items['dedication'],items['consecrated'],items['events'],items['architects'],items['architecturaltype'],items['style'],items['yearsbuilt'],items['groundbreaking'],items['completed'],items['constructioncost'],items['capacity'],items['length'],items['width'],items['height'],items['chancellor'],items['priest'],items['minister'],items['pastor'],items['LatitudeLongitude']) -}}
+
+{{- intro(items['name'],items['location'],items['district'],items['province'],items['country'],items['denomination']) -}}
+
+{{- history(items['name'],items['founded'],items['founders'],items['dedication'],items['consecrated'],items['events'],items['tradition']) -}}
+
+{{- construction(items['architects'],items['style'],items['yearsbuilt'],items['groundbreaking'],items['completed'],items['constructioncost'],items['capacity'],items['height'],items['length'],items['width']) -}}
+
+{{- present(items['chancellor'],items['priest'],items['minister'],items['membership'],items['pastor'],items['weeklyattendance'],items['website']) -}}
+
+{{- bottomSection(items['references'],items['externalLinks'],items['category']) }}
